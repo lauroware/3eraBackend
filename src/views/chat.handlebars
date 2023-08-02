@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <style>
+      body { background-color: #f3f3f3; color: #333; font-family: Arial,
+      sans-serif; display: flex; justify-content: center; align-items: center;
+      height: 100vh; margin: 0; } #chatContainer { background-color: #ffffff;
+      border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); padding:
+      20px; width: 300px; } h4 { font-size: 18px; margin-bottom: 10px;
+      text-align: center; color: #ff69b4; } #userName { font-weight: bold;
+      color: #333; } #form { display: flex; align-items: center; margin-top:
+      20px; } #message { flex: 1; padding: 8px; border: 1px solid #ccc;
+      border-radius: 4px; } #message::placeholder { color: #aaa; } #form
+      input[type="submit"] { margin-left: 10px; background-color: #ff69b4;
+      color: #fff; border: none; border-radius: 4px; padding: 8px 12px; cursor:
+      pointer; transition: background-color 0.3s ease; } #form
+      input[type="submit"]:hover { background-color: #ff1493; } #chat {
+      margin-top: 20px; border-top: 1px solid #ccc; padding-top: 10px;
+      max-height: 200px; overflow-y: auto; } #chat p { margin: 0; padding: 5px;
+      border-radius: 4px; background-color: #ff69b4; color: #fff; word-break:
+      break-all; line-height: 1.5; margin-bottom: 5px; }
+    </style>
+  </head>
+  <body>
+    <div id="chatContainer">
+      <h4 id="userName"></h4>
+      <form id="form">
+        <input
+          type="text"
+          name="message"
+          id="message"
+          placeholder="Type your message..."
+        />
+        <input type="submit" value="Send" />
+      </form>
+      <div id="chat"></div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"
+    ></script>
+    <script src="/js/chat.js"></script>
+  </body>
+</html>

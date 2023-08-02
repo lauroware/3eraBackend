@@ -1,0 +1,49 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Usuarios</title>
+    <style>
+      body { font-family: Arial, sans-serif; background-color: #f0f0f0; }
+      div.container { max-width: 400px; margin: 0 auto; padding: 20px;
+      background-color: #fff; border-radius: 10px; box-shadow: 0px 0px 10px
+      rgba(0, 0, 0, 0.1); } h2 { color: #555; } form { text-align: left; } label
+      { display: block; margin-bottom: 5px; color: #333; } input[type="text"],
+      input[type="email"], input[type="number"], input[type="password"] { width:
+      100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc;
+      border-radius: 5px; font-size: 16px; } input[type="submit"] {
+      background-color: #007bff; color: #fff; border: none; border-radius: 5px;
+      padding: 10px 20px; cursor: pointer; font-size: 16px; }
+      input[type="submit"]:hover { background-color: #0056b3; } h3 { color:
+      #555; margin-top: 20px; } button { background-color: #333; color: #fff;
+      border: none; border-radius: 5px; padding: 10px 20px; cursor: pointer;
+      font-size: 16px; } button:hover { background-color: #444; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Registro</h2>
+      <form action="/users/register" method="POST">
+        <label for="first_name">Nombre:</label>
+        <input type="text" name="first_name" id="first_name" required /><br />
+
+        <label for="last_name">Apellido:</label>
+        <input type="text" name="last_name" id="last_name" required /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required /><br />
+
+        <label for="age">Edad:</label>
+        <input type="number" name="age" id="age" required /><br />
+
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" id="password" required /><br />
+
+        <input type="submit" value="Crear" />
+      </form>
+
+      <h3>Registrarse con GitHub:</h3>
+      <button onclick="location.href='/users/registerGitHub'">GitHub</button>
+    </div>
+  </body>
+</html>

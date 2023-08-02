@@ -1,0 +1,40 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin:
+      0; padding: 0; display: flex; justify-content: center; align-items:
+      center; height: 100vh; } .container { background-color: #fff; padding:
+      30px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 400px; width: 100%; } h2 { text-align: center; margin-bottom:
+      20px; } form { display: flex; flex-direction: column; } label {
+      font-weight: bold; } input[type="email"], input[type="password"] { margin:
+      10px 0; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+      input[type="submit"] { background-color: #007bff; color: #fff; border:
+      none; border-radius: 5px; padding: 10px; cursor: pointer; }
+      input[type="submit"]:hover { background-color: #0056b3; } h3 { text-align:
+      center; margin-top: 20px; } button { background-color: #28a745; color:
+      #fff; border: none; border-radius: 5px; padding: 10px; cursor: pointer; }
+      button:hover { background-color: #1b832d; }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>LOGIN</h2>
+      <form action="/users/login" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required />
+        <input type="submit" value="Ingresar" />
+      </form>
+      <h3>Sos nuevo?</h3>
+      <button onclick="location.href='/views/register'">Registrarse</button>
+    </div>
+  </body>
+
+</html>

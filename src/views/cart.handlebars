@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compras</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; padding: 20px;
+      background-color: #f0f0f0; } .product-list { display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+      .product { border: 1px solid #ccc; padding: 20px; border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); background-color: #fff; }
+      .product-title { font-size: 24px; margin-bottom: 10px; color: #333; }
+      .product-description { font-size: 16px; margin-bottom: 15px; color: #444;
+      } .product-price { font-size: 18px; font-weight: bold; margin-bottom: 5px;
+      color: #00a0e5; } .product-code, .product-stock, .product-category {
+      font-size: 14px; margin-bottom: 5px; color: #666; } .product-thumbnails
+      img { width: 100px; height: 100px; object-fit: cover; border-radius: 4px;
+      margin-right: 5px; } .empty-cart-message { font-size: 20px; font-weight:
+      bold; text-align: center; margin-top: 50px; color: #666; } .delete-button
+      { background-color: #ff5252; color: #fff; border: none; padding: 8px 12px;
+      border-radius: 4px; cursor: pointer; } .delete-button:hover {
+      background-color: #ff0000; }
+    </style>
+  </head>
+  <body>
+    {{#if cart}}
+      <h1 style="text-align: center; color: #00a0e5;">Productos en el carrito:</h1>
+      <div class="product-list">
+        {{#each cart}}
+          <div class="product">
+            <h3 class="product-title">{{this._id.title}}</h3>
+            <p class="product-description">{{this._id.description}}</p>
+            <p class="product-price">Price: ${{this._id.price}}</p>
+            <button
+              class="delete-button"
+              onclick="removeProduct('{{this._id.productId}}')"
+            >Eliminar Producto</button>
+          </div>
+        {{/each}}
+      </div>
+    {{else}}
+      <p class="empty-cart-message">No hay productos en el carrito</p>
+    {{/if}}
+
+    <script>
+      function removeProduct(productId) { // Aquí debes implementar la lógica
+      para eliminar el producto con el ID "productId" del carrito. // Puedes
+      utilizar JavaScript o algún framework de front-end como React, Vue, etc.
+      // Por simplicidad, esta función solo muestra un mensaje en la consola.
+      console.log(`Producto con ID ${productId} eliminado del carrito.`); }
+    </script>
+  </body>
+</html>
