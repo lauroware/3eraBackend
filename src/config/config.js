@@ -7,4 +7,8 @@ export default {
   ADMIN_EMAIL: process.env.ADMIN_EMAIL,
   ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
   PERSISTENCE: process.env.PERSISTENCE,
+  nodemailer: {
+    user: process.env.MAILER_USER,
+    pass: process.env.MAILER_PASS,
+  },
 };

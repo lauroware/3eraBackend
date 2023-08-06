@@ -6,6 +6,7 @@
   "main": "src/app.js",
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
+    "@sendgrid/mail": "^7.7.0",
     "bcrypt": "^5.1.0",
     "connect-mongo": "^4.6.0",
     "cookie-parser": "^1.4.6",
@@ -17,6 +18,7 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.1",
     "mongoose-paginate-v2": "^1.7.1",
+    "nodemailer": "^6.9.4",
     "nodemon": "^2.0.20",
     "passport": "^0.6.0",
     "passport-github2": "^0.1.12",
